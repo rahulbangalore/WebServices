@@ -11,9 +11,10 @@ public class UserProfileService {
 	@POST
 	@Path("/add")
 	@Produces("text/Html")
-	public Response addUser(@FormParam("clientName")String name,@FormParam("gender")String gender,@FormParam("age")int age) {
-		return Response.status(200).entity("<p>New User Record is Added<br>Name:"+name+"<br>Age:"+age+"<br>Gender:"+gender+"</p>").build();
+	public Response addUser(@FormParam("clientName") String name, @FormParam("gender") String gender,
+			@FormParam("age") int age) {
+		return Response.status(200).entity(
+				"<p>New User Record is Added<br>Name:" + name + "<br>Age:" + age + "<br>Gender:" + gender + "</p>")
+				.build();
 	}
-	
-
 }
